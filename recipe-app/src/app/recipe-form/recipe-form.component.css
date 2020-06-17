@@ -1,0 +1,26 @@
+#create-recipe {
+   text-align: center;
+}
+
+#submit-btn {
+   width: 50%;
+   margin-top: 2rem;
+}
+
+#recipe-title {
+   width: 80%;
+   margin-bottom: 3rem;
+}
+
+h1 {
+   margin-top: 3rem;
+}
+
+form {
+   background-color: rgba(255, 255, 128, .5);
+   width: 70%;
+   margin: auto;
+   padding-bottom: 1.5rem;
+   overflow: scroll;
+   margin-bottom: 3rem;
+}

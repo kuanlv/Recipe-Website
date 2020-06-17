@@ -1,0 +1,24 @@
+<div class='step'>
+   <h2>STEP {{step}}</h2>
+   <mat-form-field class="step-title">
+      <mat-label>Step Title</mat-label>
+      <input matInput placeholder="What's this step gonna do" ngModel name="stepTitle" required>
+   </mat-form-field>
+
+   <mat-form-field class="step-description">
+      <mat-label>Describe this step in detail</mat-label>
+      <textarea matInput placeholder="..." ngModel name="stepDsecription" required></textarea>
+   </mat-form-field>
+
+   <mat-form-field class="step-url">
+      <mat-label>Youtube embedded link</mat-label>
+      <input matInput type='url' ngModel name="stepUrl" />
+   </mat-form-field>
+
+   <mat-form-field class="step-img">
+      <mat-label>Upload an image</mat-label>
+      <input matInput type='url' ngModel name="stepImg" />
+   </mat-form-field>
+
+   <button mat-raised-button color='accent'>Add Step</button>
+</div>

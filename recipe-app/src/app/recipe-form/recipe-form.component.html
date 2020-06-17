@@ -1,0 +1,14 @@
+<div id='create-recipe'>
+   <h1>Create your own recipe!</h1>
+   <form id='recipe-form' (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <mat-form-field appearance="standard" id='recipe-title'>
+         <mat-label>Your Secret Food</mat-label>
+         <input matInput placeholder="Placeholder" ngModel name="recipeName" required>
+         <mat-hint>Name of your recipe</mat-hint>
+      </mat-form-field>
+      <form>
+         <app-step></app-step>
+      </form>
+      <button type='submit' id='submit-btn' mat-raised-button color='primary'>Save</button>
+   </form>
+</div>

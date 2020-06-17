@@ -1,0 +1,20 @@
+mat-toolbar {
+   display: flex;
+}
+
+div {
+   flex: 1;
+   display: flex;
+}
+
+.navbar-btn1 {
+   text-align: center;
+}
+
+.navbar-btn2 {
+   text-align: center;
+}
+
+span {
+   flex: 2;
+}
