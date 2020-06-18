@@ -2,9 +2,16 @@
    text-align: center;
 }
 
+mat-form-field {
+   display: block;
+   width: 80%;
+   margin: auto;
+}
+
 #submit-btn {
    width: 50%;
    margin-top: 2rem;
+   margin-bottom: 3rem;
 }
 
 #recipe-title {
@@ -22,5 +29,5 @@ form {
    margin: auto;
    padding-bottom: 1.5rem;
    overflow: scroll;
-   margin-bottom: 3rem;
+
 }

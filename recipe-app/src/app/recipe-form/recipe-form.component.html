@@ -1,14 +1,42 @@
 <div id='create-recipe'>
    <h1>Create your own recipe!</h1>
    <form id='recipe-form' (ngSubmit)="onSubmit(f)" #f="ngForm">
+
       <mat-form-field appearance="standard" id='recipe-title'>
          <mat-label>Your Secret Food</mat-label>
          <input matInput placeholder="Placeholder" ngModel name="recipeName" required>
          <mat-hint>Name of your recipe</mat-hint>
       </mat-form-field>
-      <form>
-         <app-step></app-step>
-      </form>
-      <button type='submit' id='submit-btn' mat-raised-button color='primary'>Save</button>
+
+      <div *ngFor="let step of steps | slice: 1">
+         <h1>STEP {{step.stepId}}</h1>
+         <mat-form-field class="step-title">
+            <mat-label>Step Title</mat-label>
+            <input class='form-control' 
+            matInput placeholder="What's this step gonna do" 
+            ngModel name="stepTitle" required>
+         </mat-form-field>
+
+         <mat-form-field class="step-description">
+            <mat-label>Describe this step in detail</mat-label>
+            <textarea matInput placeholder="..." ngModel name="stepDsecription" required></textarea>
+         </mat-form-field>
+
+         <mat-form-field class="step-url">
+            <mat-label>Youtube embedded link</mat-label>
+            <input matInput type='url' ngModel name="stepUrl" />
+         </mat-form-field>
+
+         <mat-form-field class="step-img">
+            <mat-label>Upload an image</mat-label>
+            <input matInput type='url' ngModel name="stepImg" />
+         </mat-form-field>
+      </div>
+
+      <!-- <ng-container #newStep></ng-container> -->
+
+      <button mat-raised-button color='accent' (click)="copyStep()">Add a Step</button>
+
    </form>
+   <button type='submit' form='recipe-form' id='submit-btn' mat-raised-button color='primary'>Save</button>
 </div>
