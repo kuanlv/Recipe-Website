@@ -12,14 +12,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { RecipeFormComponent } from './recipe-form/recipe-form.component';
-import { StepComponent } from './step/step.component';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       NavbarComponent,
       RecipeFormComponent,
-      StepComponent
+      RecipesComponent
    ],
    imports: [
       BrowserModule,
