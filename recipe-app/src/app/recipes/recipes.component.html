@@ -1,2 +1,8 @@
-<h1>hh</h1>
-<router-outlet></router-outlet>
+<div *ngIf="recipes.length===0 else dfs">
+   <h1>There are no recipes yet!</h1>
+</div>
+<ng-template id='recipe-list' #dfs>
+   <mat-list *ngFor="let recipe of recipes">
+      <mat-list-item>{{recipe.name}}</mat-list-item>
+   </mat-list>
+</ng-template>

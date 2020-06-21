@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer2, ViewChild, TemplateRef, ViewContainerRef } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Recipes } from '../recipes';
 import recipes  from '../data';
+import { Router } from '@angular/router';
 
 @Component({
    selector: 'app-recipe-form',
@@ -33,7 +33,7 @@ export class RecipeFormComponent implements OnInit {
          stepImg: ""
       };
 
-   constructor(private renderer: Renderer2) {
+   constructor(private renderer: Renderer2, private route: Router) {
    }
 
    ngOnInit(): void {
@@ -80,6 +80,10 @@ export class RecipeFormComponent implements OnInit {
       console.log(form);
       const newRecipe = new Recipes(recipes.length + 1, form.recipeName, this.steps);
       recipes.push(newRecipe);
-      console.log(newRecipe);
+      this.route.navigate(['/recipes']);
+   }
+
+   onFileSelected() {
+
    }
 }

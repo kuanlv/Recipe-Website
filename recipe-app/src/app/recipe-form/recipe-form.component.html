@@ -12,14 +12,14 @@
 
          <mat-form-field class="step-title">
             <mat-label>Step Title</mat-label>
-            <input class='form-control' 
-            matInput placeholder="step title" 
-            (ngModel)="steps[noOfStep].stepTitle" name="stepTitle" value="step.stepTitle" required>
+            <input class='form-control' matInput placeholder="step title" (ngModel)="steps[noOfStep].stepTitle"
+               name="stepTitle" value="step.stepTitle" required>
          </mat-form-field>
 
          <mat-form-field class="step-description">
             <mat-label>Describe this step in detail</mat-label>
-            <textarea matInput placeholder="..." (ngModel)="steps[noOfStep].stepDescription" name="stepDescription" required></textarea>
+            <textarea matInput placeholder="..." (ngModel)="steps[noOfStep].stepDescription" name="stepDescription"
+               required></textarea>
          </mat-form-field>
 
          <mat-form-field class="step-url">
@@ -33,13 +33,11 @@
          </mat-form-field>
       </div>
 
-      <!-- <ng-container #newStep></ng-container> -->
-
-      <button mat-raised-button color='accent' (click)="copyStep(f.value)" [disabled]='!isAddable' >Add a Step</button>
-      <button mat-raised-button color='accent' (click)="saveStep(f.value)" [disabled]="!isSaveable" *ngIf="stepForm.length > 1">Save a Step</button>
+      <button mat-raised-button color='accent' (click)="copyStep(f.value)" [disabled]='!isAddable'>Add a Step</button>
+      <button id='23' mat-raised-button color='accent' (click)="saveStep(f.value)" [disabled]="!isSaveable"
+         *ngIf="stepForm.length > 1">Save a Step</button>
 
    </form>
-   <button type='submit' form='recipe-form' id='submit-btn' mat-raised-button color='primary' [disabled]="!submitForm" (click)='submit(f.value)'>Save</button>
+   <button type='submit' form='recipe-form' id='submit-btn' mat-raised-button color='primary' [disabled]="!submitForm"
+      (click)='submit(f.value)'>Save</button>
 </div>
-
-<router-outlet></router-outlet>

@@ -6,8 +6,10 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { AppComponent } from './app.component'
 
 const routes: Routes = [
-   { path: 'recipes', component: RecipesComponent } 
+   { path: '', component: RecipeFormComponent },
+   { path: 'recipes', component: RecipesComponent }
 ];
+
 
 @NgModule({
    imports: [RouterModule.forRoot(routes)],

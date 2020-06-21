@@ -4,15 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RecipeFormComponent } from './recipe-form/recipe-form.component';
+import { RecipesComponent } from './recipes/recipes.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 
-import { RecipeFormComponent } from './recipe-form/recipe-form.component';
-import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
    declarations: [
@@ -29,7 +31,8 @@ import { RecipesComponent } from './recipes/recipes.component';
       MatToolbarModule,
       MatButtonModule,
       MatFormFieldModule,
-      MatInputModule
+      MatInputModule,
+      MatListModule
    ],
    providers: [],
    bootstrap: [AppComponent]
