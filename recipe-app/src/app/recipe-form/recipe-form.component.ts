@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, ViewChild, TemplateRef, ViewContainerRef } from '@angular/core';
 import { Recipes } from '../recipes';
-import recipes  from '../data';
+import recipes  from '../../../../data';
 import { Router } from '@angular/router';
 
 @Component({
